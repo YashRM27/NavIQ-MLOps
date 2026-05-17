@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: naviq-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naviq
+  template:
+    metadata:
+      labels:
+        app: naviq
+    spec:
+      containers:
+        - name: naviq
+          image: naviq-app:latest
+          ports:
+            - containerPort: 8501
+          envFrom:
+            - configMapRef:
+                name: naviq-config
+            - secretRef:
+                name: naviq-secret
+          volumeMounts:
+            - name: data-volume
+              mountPath: /app/data
+      volumes:
+        - name: data-volume
+          emptyDir: {}

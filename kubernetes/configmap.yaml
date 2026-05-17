@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: naviq-config
+data:
+  CHROMA_HOST: "chromadb-service"
+  CHROMA_PORT: "8000"
