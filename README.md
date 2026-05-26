@@ -9,7 +9,7 @@ A production-style AI application that answers natural language questions about 
 
 ## 🖥️ Demo
 
-![NavIQ Demo](assets/demo.png)
+[![NavIQ Demo](assets/demo.png)](https://youtu.be/cIhnYvm1DE4)
 
 ---
 
